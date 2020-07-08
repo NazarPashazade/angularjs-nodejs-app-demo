@@ -1,0 +1,39 @@
+<div id="content">
+    <button (click)='createNewContact()' class="btn btn-outline-primary">Create new Contact</button>
+    <table class="table">
+        <thead>
+            <tr>
+                <th style="display: none;">Id</th>
+                <th scope="col">First</th>
+                <th scope="col">Last</th>
+                <th scope="col">Phone</th>
+                <th scope="col">More</th>
+                <th scope="col">Edit</th>
+                <th scope="col">Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let contact of contacts">
+                <td style="display: none;">{{ contact.id }}</td>
+                <td>{{ contact.firstName }}</td>
+                <td>{{ contact.lastName }}</td>
+                <td>{{ contact.phone }}</td>
+                <td>
+                    <button (click)="moreInfo(contact._id)" class=" btn btn-primary btnDesign ">
+            More
+          </button>
+                </td>
+                <td>
+                    <button (click)="editContact(contact._id) " class="btn btn-success btnDesign ">
+            Edit
+          </button>
+                </td>
+                <td>
+                    <button (click)="deleteContact(contact._id) " class="btn btn-danger btnDesign ">
+            Delete
+          </button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,62 @@
+<div id="content">
+    <table>
+        <tr>
+            <td colspan="2">
+                <div>
+                    <h3 style="color: red; margin: 0 auto; width: 300px;" *ngIf="welcomeMessage">
+                        {{ welcomeMessage }}
+                    </h3>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>First Name :</td>
+            <td>
+                <input type="text" id="firstName" [(ngModel)]="selectedContact.firstName" placeholder=" FirstName..." />
+            </td>
+        </tr>
+        <tr>
+            <td>Last Name :</td>
+            <td>
+                <input type="text" id="lastName" [(ngModel)]="selectedContact.lastName" placeholder=" LastName..." />
+            </td>
+        </tr>
+        <tr>
+            <td>PhoneNumber:</td>
+            <td>
+                <input type="text" id="phoneNumber" [(ngModel)]="selectedContact.phone" placeholder=" (XXX) XXX-XXXX" />
+            </td>
+        </tr>
+        <tr>
+            <td>PhoneNumberType :</td>
+            <td>
+                <select id="phoneType" [(ngModel)]="selectedContact.phoneType">
+          <option value="Home">Home</option>
+          <option value="Work">Work</option>
+          <option value="Mobile">Mobile</option>
+        </select>
+            </td>
+        </tr>
+        <tr *ngIf="isShowDate">
+            <td>Created Date :</td>
+            <td>{{ createdDate }}</td>
+        </tr>
+        <tr *ngIf="isShowDate">
+            <td>Modified Date:</td>
+            <td>{{ modifiedDate }}</td>
+        </tr>
+
+        <tr>
+            <td colspan="2">
+                <button (click)="save()" class="btn btn-outline-primary" id="save">
+          Save
+        </button>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <p style="color: red;" *ngIf="infoMessage">{{ infoMessage }}</p>
+            </td>
+        </tr>
+    </table>
+</div>

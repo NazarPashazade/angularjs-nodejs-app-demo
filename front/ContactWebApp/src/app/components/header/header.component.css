@@ -1,0 +1,13 @@
+.navbar-header {
+    margin: 0 auto;
+}
+
+.navbar-inverse {
+    background-color: black;
+}
+
+a {
+    font-size: 18px;
+    color: white;
+    margin: 0 500px;
+}

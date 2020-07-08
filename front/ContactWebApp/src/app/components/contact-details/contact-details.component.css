@@ -1,0 +1,17 @@
+table {
+    width: 500px;
+    margin: 0 auto;
+    font-size: 20px;
+}
+
+td {
+    height: 80px;
+}
+
+#content {
+    min-height: 560px;
+}
+
+label {
+    color: red;
+}
